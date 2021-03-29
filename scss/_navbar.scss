@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  &__logo {
+    align-self: center;
+  }
+  &__list {
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+  }
+  &__list-item {
+    padding-right: 20px;
+  }
+  &__link {
+    color: gray;
+    text-decoration: none;
+  }
+  &__list-separator {
+    display: flex;
+  }
+}

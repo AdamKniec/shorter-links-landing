@@ -1,0 +1,27 @@
+.features-section {
+  background-color: #eff1f7;
+  padding-bottom: 100px;
+  .section-header {
+    padding-top: 50px;
+    margin-bottom: 10px;
+  }
+  .section-sub-header {
+    width: 460px;
+    text-align: center;
+    margin: 0 auto;
+    color: #a09d9d;
+    padding-bottom: 50px;
+  }
+  .card-wrapper {
+    display: flex;
+    justify-content: center;
+    .card {
+      width: 300px;
+      height: 200px;
+      background-color: #fff;
+      margin-right: 20px;
+      border-radius: 5px;
+      padding: 10px;
+    }
+  }
+}

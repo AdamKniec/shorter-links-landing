@@ -1,0 +1,23 @@
+{
+  "name": "shorter-links-landing",
+  "version": "1.0.0",
+  "description": "Landing page of an application responsible for shortening the URL's provided by the user",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamKniec/shorter-links-landing.git"
+  },
+  "author": "Adam Kniec",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AdamKniec/shorter-links-landing/issues"
+  },
+  "homepage": "https://github.com/AdamKniec/shorter-links-landing#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}

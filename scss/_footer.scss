@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  background-color: hsl(255, 11%, 22%);
+  color: white;
+  &__list {
+    padding-left: 0;
+  }
+  &__list-item {
+    list-style-type: none;
+  }
+  &__list-link {
+    text-decoration: none;
+    color: #a09d9d;
+  }
+}

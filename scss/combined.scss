@@ -1,0 +1,16 @@
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+}
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+}
+@import "navbar.scss";
+@import "common.scss";
+@import "intro.scss";
+@import "shortener-component.scss";
+@import "features-section.scss";
+@import "get-started.scss";
+@import "get-started.scss";
+@import "footer.scss";
