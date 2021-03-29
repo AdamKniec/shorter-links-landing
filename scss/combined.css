@@ -1,0 +1,336 @@
+@font-face {
+  font-family: Poppins-Medium;
+  src: url("../assets/fonts/Poppins-Medium.ttf");
+}
+
+@font-face {
+  font-family: Poppins-Bold;
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf");
+}
+
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar__logo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.navbar__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+}
+
+.navbar__list-item {
+  padding-right: 20px;
+}
+
+.navbar__link {
+  color: gray;
+  text-decoration: none;
+}
+
+.navbar__list-separator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body {
+  font-family: Poppins-Medium;
+  margin: 0;
+  padding: 0;
+}
+
+.section-header {
+  font-family: "Poppins-Bold";
+  margin-top: 0;
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.section-header--white {
+  color: white;
+}
+
+@font-face {
+  font-family: "Poppins-";
+  src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("ttf");
+}
+
+.intro {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 100px;
+}
+
+.intro .intro-header-wrapper {
+  width: 500px;
+}
+
+.intro__heading {
+  font-family: "Poppins-Bold";
+  font-size: 4em;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.intro__sub-heading {
+  margin-top: 0;
+  color: #a09d9d;
+  letter-spacing: 1px;
+}
+
+.intro__button {
+  background-color: #2acfcf;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-family: "Poppins-Medium";
+  letter-spacing: 1px;
+  width: 160px;
+  font-size: 1em;
+  margin-top: 20px;
+}
+
+.shortener-component {
+  background-color: #eff1f7;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.shortener-component__form {
+  background-image: url("../assets/imgs/bg-shorten-desktop.svg");
+  background-repeat: no-repeat;
+  height: 130px;
+  background-color: #3b3054;
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1000px;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.shortener-component__input {
+  padding: 13px;
+  width: 700px;
+  border-radius: 5px;
+  margin-right: 20px;
+  border: none;
+  font-family: "Poppins-Medium";
+  font-size: 1em;
+}
+
+.shortener-component__button {
+  padding: 13px;
+  width: 120px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2acfcf;
+  color: white;
+  font-family: "Poppins-Medium";
+  font-size: 1em;
+}
+
+.shortener-component__link-list {
+  margin-top: 80px;
+  width: 1000px;
+  padding-left: 0;
+}
+
+.shortener-component__list-item {
+  list-style-type: none;
+  background-color: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shortener-component__short-link {
+  text-decoration: none;
+  color: #2acfcf;
+  margin-right: 10px;
+}
+
+.shortener-component__copy-button {
+  padding: 7px;
+  width: 70px;
+  border-radius: 5px;
+  border: none;
+  background-color: #2acfcf;
+  color: white;
+  cursor: pointer;
+}
+
+.features-section {
+  background-color: #eff1f7;
+  padding-bottom: 100px;
+}
+
+.features-section .section-header {
+  padding-top: 50px;
+  margin-bottom: 10px;
+}
+
+.features-section .section-sub-header {
+  width: 460px;
+  text-align: center;
+  margin: 0 auto;
+  color: #a09d9d;
+  padding-bottom: 50px;
+}
+
+.features-section .card-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.features-section .card-wrapper .card {
+  width: 300px;
+  height: 200px;
+  background-color: #fff;
+  margin-right: 20px;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.get-started-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../assets/imgs/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: #3b3054;
+  background-size: 100% 100%;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.get-started-section__button {
+  background-color: #2acfcf;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-family: "Poppins-Medium";
+  letter-spacing: 1px;
+  width: 160px;
+  font-size: 1em;
+}
+
+.get-started-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: url("../assets/imgs/bg-boost-desktop.svg");
+  background-repeat: no-repeat;
+  background-color: #3b3054;
+  background-size: 100% 100%;
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.get-started-section__button {
+  background-color: #2acfcf;
+  border-radius: 30px 30px 30px 30px;
+  border: none;
+  padding: 12px;
+  color: white;
+  font-family: "Poppins-Medium";
+  letter-spacing: 1px;
+  width: 160px;
+  font-size: 1em;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #35323e;
+  color: white;
+}
+
+.footer__list {
+  padding-left: 0;
+}
+
+.footer__list-item {
+  list-style-type: none;
+}
+
+.footer__list-link {
+  text-decoration: none;
+  color: #a09d9d;
+}
+/*# sourceMappingURL=combined.css.map */
