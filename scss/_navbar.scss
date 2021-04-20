@@ -1,5 +1,11 @@
 .navbar {
   display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+  // paddingami odsunac od krawedzi na mobile
   &__logo {
     align-self: center;
   }
@@ -10,12 +16,34 @@
   }
   &__list-item {
     padding-right: 20px;
+    &:nth-child(4) {
+      margin-right: 40px;
+    }
+    &:last-child {
+      position: absolute;
+      right: 0;
+    }
+    &:nth-child(4) {
+      position: absolute;
+      right: 80px;
+    }
   }
   &__link {
     color: gray;
     text-decoration: none;
+    &--hover-background {
+      padding: 5px 15px 5px 15px;
+    }
+    &--hover-background:hover {
+      color: white;
+      background-color: #9fe8e8;
+      border-radius: 30px 30px 30px 30px;
+    }
+    &--hover-black:hover {
+      color: black;
+    }
   }
-  &__list-separator {
-    display: flex;
-  }
+  // &__list-separator {
+  //   display: flex;
+  // }
 }

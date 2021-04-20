@@ -1,3 +1,4 @@
+@import "./mixins";
 @font-face {
   font-family: "Poppins-";
   src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("ttf");
@@ -8,14 +9,34 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 100px;
+  padding-left: 235px;
+
+  @include breakpoint(laptop) {
+    padding-left: 13%;
+    margin-top: 50px;
+  }
+  @include breakpoint(tablet) {
+    flex-direction: column-reverse;
+    padding-left: 20px;
+    margin-left: 0;
+  }
+  @include breakpoint(phablet) {
+    overflow-x: hidden;
+  }
   .intro-header-wrapper {
     width: 500px;
+    @include breakpoint(tablet) {
+      text-align: center;
+    }
   }
   &__heading {
     font-family: "Poppins-Bold";
     font-size: 4em;
     line-height: 1.2;
     margin-bottom: 0;
+    @include breakpoint(laptop) {
+      font-size: 3em;
+    }
   }
   &__sub-heading {
     margin-top: 0;
@@ -33,5 +54,24 @@
     width: 160px;
     font-size: 1em;
     margin-top: 20px;
+    &--hover-opacity:hover {
+      background-color: #9fe8e8;
+      cursor: pointer;
+    }
+  }
+  .intro-image-wrapper {
+    @include breakpoint(tablet) {
+      display: flex;
+      justify-content: center;
+    }
+    img {
+      @include breakpoint(laptop) {
+        width: 70%;
+      }
+      @include breakpoint(phablet) {
+        width: 520px;
+        margin-left: 50px;
+      }
+    }
   }
 }
