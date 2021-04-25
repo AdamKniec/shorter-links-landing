@@ -26,6 +26,8 @@
       width: 40%;
       display: flex;
       flex-direction: column;
+      height: unset;
+      padding: 20px;
     }
   }
   &__input {
@@ -43,6 +45,8 @@
     @include breakpoint(phablet) {
       width: 60%;
       margin-right: 0;
+      margin-bottom: 40px;
+      width: 90%;
     }
   }
 
@@ -67,6 +71,9 @@
     &:hover {
       background-color: #9fe8e8;
     }
+    @include breakpoint(phablet) {
+      width: 100%;
+    }
   }
   &__validation-message {
     position: absolute;
@@ -74,6 +81,10 @@
     left: 65px;
     font-size: 0.8em;
     color: rgb(187, 96, 96);
+    @include breakpoint(phablet) {
+      bottom: 75px;
+      left: 20px;
+    }
   }
   &__validation-message--hidden {
     display: none;
@@ -88,6 +99,9 @@
     @include breakpoint(laptop) {
       width: 80%;
     }
+    @include breakpoint(laptop) {
+      // padding: 0;
+    }
   }
   &__list-item {
     list-style-type: none;
@@ -100,6 +114,49 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include breakpoint(phablet) {
+      flex-direction: column;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    div:nth-child(1) {
+      @include breakpoint(phablet) {
+        width: 100%;
+        border-bottom: 1px solid black;
+      }
+      p {
+        margin: 0; // TODO - nie stylujemy to tagach
+        @include breakpoint(phablet) {
+          padding: 10px 0 10px 20px;
+        }
+      }
+    }
+    div:nth-child(2) {
+      @include breakpoint(phablet) {
+        padding: 10px 0 10px 40px;
+      }
+
+      a {
+        @include breakpoint(phablet) {
+          padding-bottom: 10px;
+        }
+      }
+      button {
+        @include breakpoint(phablet) {
+          margin-bottom: 10px;
+          width: 90%;
+          padding: 10px;
+        }
+      }
+    }
+    div {
+      @include breakpoint(phablet) {
+        display: flex;
+        flex-direction: column;
+        padding: 10px 0 10px 0;
+        width: 100%;
+      }
+    }
   }
   &__short-link {
     text-decoration: none;

@@ -255,6 +255,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    height: unset;
+    padding: 20px;
   }
 }
 
@@ -278,6 +280,8 @@ body {
   .shortener-component__input {
     width: 60%;
     margin-right: 0;
+    margin-bottom: 40px;
+    width: 90%;
   }
 }
 
@@ -321,12 +325,25 @@ body {
   background-color: #9fe8e8;
 }
 
+@media (max-width: 760px) {
+  .shortener-component__button {
+    width: 100%;
+  }
+}
+
 .shortener-component__validation-message {
   position: absolute;
   bottom: 0;
   left: 65px;
   font-size: 0.8em;
   color: #bb6060;
+}
+
+@media (max-width: 760px) {
+  .shortener-component__validation-message {
+    bottom: 75px;
+    left: 20px;
+  }
 }
 
 .shortener-component__validation-message--hidden {
@@ -362,6 +379,68 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 760px) {
+  .shortener-component__list-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0;
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 760px) {
+  .shortener-component__list-item div:nth-child(1) {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+}
+
+.shortener-component__list-item div:nth-child(1) p {
+  margin: 0;
+}
+
+@media (max-width: 760px) {
+  .shortener-component__list-item div:nth-child(1) p {
+    padding: 10px 0 10px 20px;
+  }
+}
+
+@media (max-width: 760px) {
+  .shortener-component__list-item div:nth-child(2) {
+    padding: 10px 0 10px 40px;
+  }
+}
+
+@media (max-width: 760px) {
+  .shortener-component__list-item div:nth-child(2) a {
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .shortener-component__list-item div:nth-child(2) button {
+    margin-bottom: 10px;
+    width: 90%;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 760px) {
+  .shortener-component__list-item div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 10px 0 10px 0;
+    width: 100%;
+  }
 }
 
 .shortener-component__short-link {
