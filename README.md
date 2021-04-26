@@ -27,7 +27,7 @@ https://mystifying-noyce-56032f.netlify.app/
 - Vanilla JS (ES6)
 - Fetch API
   
-  ## TO DO
-  - SCSS Refactor 
-  - BEM naming refactor
-  - Adding tests
+## TO DO
+- SCSS Refactor 
+- BEM naming refactor
+- Adding tests
