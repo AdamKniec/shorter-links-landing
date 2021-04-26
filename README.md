@@ -20,6 +20,7 @@ https://mystifying-noyce-56032f.netlify.app/
 - If the link is proper - it's getting saved to the localStorage so that it's not gone after the page reload
 - Mobile navigation menu
 - Each of the links provided by the user can be easily copied to the clipboard with a single click !
+- User sees the loader after the form is submitted and he's waiting for the API response
 
 ## Tech Stack
 - SCSS (mixins)
@@ -31,3 +32,4 @@ https://mystifying-noyce-56032f.netlify.app/
 - SCSS Refactor 
 - BEM naming refactor
 - Adding tests
+- Some simple and light animations
