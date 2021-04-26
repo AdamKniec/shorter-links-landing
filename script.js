@@ -3,6 +3,10 @@
   const urlInput = document.getElementById("url-input");
   const linksList = document.getElementById("url-list");
   const validationMessage = document.getElementById("validationMesage");
+  const spinner = document.getElementById("spinner");
+  const buttonLabel = document.getElementById("button-label");
+
+  let linksToBeSaved = [];
 
   const correctUrlPattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
@@ -26,7 +30,7 @@
   const generateListElement = (inputUrl, shortenedLink) => {
     return `
     <li class="shortener-component__list-item">
-        ${inputUrl}
+      <div><p>${inputUrl}</p></div> 
       <div>
         <a href=${shortenedLink} class="shortener-component__short-link">${shortenedLink}</a>
         <button class="shortener-component__copy-button">Copy</button>
@@ -37,7 +41,8 @@
   const getTheShortenedUrl = (inputValue) => {
     return fetch(`https://api.shrtco.de/v2/shorten?url=${inputValue}`)
       .then((response) => response.json())
-      .then((data) => data);
+      .then((data) => data)
+      .catch((err) => console.log(err));
   };
 
   const addLinkListItem = (userInputLink, shortenedLink) => {
@@ -46,9 +51,18 @@
   };
 
   const handleSucessfulFormSubmit = (inputValue) => {
+    spinner.classList.add("visible");
+    buttonLabel.textContent = "";
     getTheShortenedUrl(inputValue).then((data) => {
       if (data.result) {
         addLinkListItem(inputValue, data.result.short_link);
+        linksToBeSaved = [
+          ...linksToBeSaved,
+          { inputValue, shortLink: data.result.short_link },
+        ];
+        localStorage.setItem("linksData", JSON.stringify(linksToBeSaved));
+        spinner.classList.remove("visible");
+        buttonLabel.textContent = "Shorten it!";
       }
     });
     urlInput.classList.remove("shortener-component__input--validation-failed");
@@ -67,5 +81,35 @@
     }
   };
 
+  const renderLocalStorageData = () => {
+    const dataToBeRendered = localStorage.getItem("linksData");
+    linksToBeSaved = [...JSON.parse(dataToBeRendered)];
+    JSON.parse(dataToBeRendered).forEach((element) => {
+      addLinkListItem(element.inputValue, element.shortLink);
+    });
+  };
+
+  const handleCopyButtonClick = (e) => {
+    const copyButtons = document.querySelectorAll(
+      ".shortener-component__copy-button"
+    );
+    copyButtons.forEach((button) => {
+      button.classList.remove("test");
+      button.textContent = "Copy";
+    });
+    if (e.srcElement.className === "shortener-component__copy-button") {
+      const link = e.target.parentElement.firstElementChild.textContent;
+
+      e.target.classList.add("test");
+      e.target.textContent = "Copied!";
+      navigator.clipboard
+        .writeText(link)
+        .then(() => console.log("Copied successfully!"))
+        .catch((err) => console.log(err));
+    }
+  };
+
   submitButton.addEventListener("click", handleFormSubmit);
+  window.addEventListener("load", renderLocalStorageData);
+  linksList.addEventListener("click", (e) => handleCopyButtonClick(e));
 })();

@@ -1,3 +1,8 @@
+@import "./mixins";
+// @font-face {
+//   font-family: "Poppins-";
+//   src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("ttf");
+// }
 .navbar {
   display: flex;
   max-width: 1000px;
@@ -5,7 +10,10 @@
   position: relative;
   padding-left: 20px;
   padding-right: 20px;
-  // paddingami odsunac od krawedzi na mobile
+  @include breakpoint(phablet) {
+    margin-top: 15px;
+    text-align: center;
+  }
   &__logo {
     align-self: center;
   }
@@ -13,34 +21,103 @@
     display: flex;
     list-style-type: none;
     width: 100%;
+    @include breakpoint(phablet) {
+      display: none;
+      border-radius: 10px;
+      padding: 0ch;
+    }
+    &.mobile-active {
+      background-color: hsl(257, 27%, 26%);
+      position: absolute;
+      top: 50px;
+      width: 90%;
+      display: block;
+    }
+  }
+
+  .hamburger {
+    display: none;
+    @include breakpoint(phablet) {
+      display: block;
+      width: 40px;
+      height: 22px;
+      right: 20px;
+      border: 0;
+      border-top: 5px solid #b6b1b1;
+      background: transparent;
+      position: absolute;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15px;
+      left: 0;
+      width: 100%;
+      border-top: 5px solid #b6b1b1;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 5px;
+      left: 0;
+      width: 100%;
+      border-top: 5px solid #b6b1b1;
+      //TODO REFATOR CSS !!!!!!!!!!!!!!!!
+    }
   }
   &__list-item {
     padding-right: 20px;
+    @include breakpoint(phablet) {
+      margin: 30px;
+      padding-right: 0;
+    }
+    &:nth-child(3) {
+      @include breakpoint(phablet) {
+        border-bottom: 1px solid rgb(138, 136, 136);
+        padding-bottom: 30px;
+      }
+    }
     &:nth-child(4) {
       margin-right: 40px;
+      position: absolute;
+      right: 80px;
+      @include breakpoint(phablet) {
+        position: relative;
+        right: 0;
+      }
     }
     &:last-child {
       position: absolute;
       right: 0;
-    }
-    &:nth-child(4) {
-      position: absolute;
-      right: 80px;
+      @include breakpoint(phablet) {
+        position: relative;
+      }
     }
   }
   &__link {
     color: gray;
     text-decoration: none;
+    @include breakpoint(phablet) {
+      color: white;
+    }
     &--hover-background {
       padding: 5px 15px 5px 15px;
     }
     &--hover-background:hover {
       color: white;
-      background-color: #9fe8e8;
+      background-color: #2acfcf;
       border-radius: 30px 30px 30px 30px;
+      @include breakpoint(phablet) {
+        padding: 3% 30% 3% 30%;
+      }
     }
     &--hover-black:hover {
       color: black;
+      @include breakpoint(phablet) {
+        color: gray;
+      }
     }
   }
   // &__list-separator {
