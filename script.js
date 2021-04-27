@@ -94,13 +94,13 @@
       ".shortener-component__copy-button"
     );
     copyButtons.forEach((button) => {
-      button.classList.remove("test");
+      button.classList.remove("active");
       button.textContent = "Copy";
     });
     if (e.srcElement.className === "shortener-component__copy-button") {
       const link = e.target.parentElement.firstElementChild.textContent;
 
-      e.target.classList.add("test");
+      e.target.classList.add("active");
       e.target.textContent = "Copied!";
       navigator.clipboard
         .writeText(link)

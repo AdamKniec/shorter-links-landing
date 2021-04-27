@@ -231,6 +231,7 @@ body {
 @media (max-width: 760px) {
   .intro {
     overflow-x: hidden;
+    padding-right: 20px;
   }
 }
 
@@ -244,6 +245,12 @@ body {
   }
 }
 
+@media (max-width: 760px) {
+  .intro .intro-header-wrapper {
+    width: auto;
+  }
+}
+
 .intro__heading {
   font-family: "Poppins-Bold";
   font-size: 4em;
@@ -254,6 +261,12 @@ body {
 @media (max-width: 1400px) {
   .intro__heading {
     font-size: 3em;
+  }
+}
+
+@media (max-width: 760px) {
+  .intro__heading {
+    font-size: 2.4em;
   }
 }
 
@@ -300,7 +313,7 @@ body {
 
 @media (max-width: 760px) {
   .intro .intro-image-wrapper img {
-    width: 520px;
+    width: 420px;
     margin-left: 50px;
   }
 }
@@ -350,7 +363,7 @@ body {
 
 @media (max-width: 760px) {
   .shortener-component__form {
-    width: 40%;
+    width: 60%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -517,17 +530,22 @@ body {
 
 .shortener-component__list-item div:nth-child(1) p {
   margin: 0;
+  margin-left: 15px;
 }
 
 @media (max-width: 760px) {
   .shortener-component__list-item div:nth-child(1) p {
-    padding: 10px 0 10px 20px;
+    margin-left: 5%;
   }
+}
+
+.shortener-component__list-item div:nth-child(2) {
+  padding-left: 25px;
 }
 
 @media (max-width: 760px) {
   .shortener-component__list-item div:nth-child(2) {
-    padding: 10px 0 10px 40px;
+    margin-left: 5%;
   }
 }
 
@@ -579,7 +597,7 @@ body {
   background-color: #9fe8e8;
 }
 
-.shortener-component .test {
+.shortener-component .active {
   background-color: #3b3054;
 }
 
@@ -601,6 +619,14 @@ body {
   padding-bottom: 50px;
 }
 
+@media (max-width: 760px) {
+  .features-section .section-sub-header {
+    width: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
 .features-section .card-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -610,13 +636,45 @@ body {
           justify-content: center;
   margin-top: 70px;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  margin-left: 20px;
+  margin-right: 20px;
+  position: relative;
+}
+
+.features-section .card-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  max-width: 900px;
+  background-color: #2acfcf;
+  width: 80%;
+  top: 120px;
+  height: 10px;
+}
+
+@media (max-width: 760px) {
+  .features-section .card-wrapper::after {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+    top: 50%;
+    width: 800px;
+  }
+}
+
+@media (max-width: 760px) {
+  .features-section .card-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .features-section .card-wrapper .card {
-  width: 270px;
-  height: 180px;
+  max-width: 270px;
   background-color: #fff;
   margin-right: 20px;
   border-radius: 5px;
@@ -625,6 +683,13 @@ body {
   padding-top: 50px;
   padding-left: 30px;
   margin-bottom: 50px;
+  z-index: 10;
+}
+
+@media (max-width: 760px) {
+  .features-section .card-wrapper .card {
+    margin-right: 0;
+  }
 }
 
 .features-section .card-wrapper .card:nth-child(2) {
@@ -662,6 +727,7 @@ body {
 .features-section .card-wrapper .card__description {
   font-size: 0.9em;
   color: #a09d9d;
+  padding-bottom: 20px;
 }
 
 .get-started-section {
@@ -757,6 +823,7 @@ body {
       flex-wrap: wrap;
   padding-left: 20px;
   padding-right: 20px;
+  padding-bottom: 50px;
 }
 
 .footer .footer-wrapper {
@@ -768,12 +835,39 @@ body {
       flex-wrap: wrap;
 }
 
+@media (max-width: 760px) {
+  .footer .footer-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-right: 0;
+    text-align: center;
+    width: 200px;
+  }
+}
+
 .footer div {
   margin-right: 50px;
 }
 
+@media (max-width: 760px) {
+  .footer div {
+    margin-right: 0;
+  }
+}
+
 .footer div .footer__logo {
-  margin-right: 200px;
+  margin-right: 180px;
+}
+
+@media (max-width: 760px) {
+  .footer div .footer__logo {
+    margin-right: 0;
+  }
 }
 
 .footer div:last-child {

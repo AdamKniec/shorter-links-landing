@@ -23,7 +23,7 @@
       width: 80%;
     }
     @include breakpoint(phablet) {
-      width: 40%;
+      width: 60%;
       display: flex;
       flex-direction: column;
       height: unset;
@@ -134,16 +134,17 @@
       }
       p {
         margin: 0; // TODO - nie stylujemy to tagach
+        margin-left: 15px;
         @include breakpoint(phablet) {
-          padding: 10px 0 10px 20px;
+          margin-left: 5%;
         }
       }
     }
     div:nth-child(2) {
+      padding-left: 25px;
       @include breakpoint(phablet) {
-        padding: 10px 0 10px 40px;
+        margin-left: 5%;
       }
-
       a {
         @include breakpoint(phablet) {
           padding-bottom: 10px;
@@ -184,7 +185,7 @@
       background-color: #9fe8e8;
     }
   }
-  .test {
+  .active {
     background-color: #3b3054;
   }
 }

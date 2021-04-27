@@ -22,11 +22,15 @@
   }
   @include breakpoint(phablet) {
     overflow-x: hidden;
+    padding-right: 20px;
   }
   .intro-header-wrapper {
     width: 500px;
     @include breakpoint(tablet) {
       text-align: center;
+    }
+    @include breakpoint(phablet) {
+      width: auto;
     }
   }
   &__heading {
@@ -36,6 +40,9 @@
     margin-bottom: 0;
     @include breakpoint(laptop) {
       font-size: 3em;
+    }
+    @include breakpoint(phablet) {
+      font-size: 2.4em;
     }
   }
   &__sub-heading {
@@ -69,7 +76,7 @@
         width: 70%;
       }
       @include breakpoint(phablet) {
-        width: 520px;
+        width: 420px;
         margin-left: 50px;
       }
     }
