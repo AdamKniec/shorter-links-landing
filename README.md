@@ -1,5 +1,6 @@
 # shorter-links-landing
 <img width="100%" src="https://i.ibb.co/47VbFxX/Zrzut-ekranu-2021-05-1-o-19-05-50.png" alt="" />
+
 ## Introduction
 App idea comes from the FrontendMentor platform:
 
