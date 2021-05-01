@@ -83,10 +83,12 @@
 
   const renderLocalStorageData = () => {
     const dataToBeRendered = localStorage.getItem("linksData");
-    linksToBeSaved = [...JSON.parse(dataToBeRendered)];
-    JSON.parse(dataToBeRendered).forEach((element) => {
-      addLinkListItem(element.inputValue, element.shortLink);
-    });
+    if (dataToBeRendered) {
+      linksToBeSaved = [...JSON.parse(dataToBeRendered)];
+      JSON.parse(dataToBeRendered).forEach((element) => {
+        addLinkListItem(element.inputValue, element.shortLink);
+      });
+    }
   };
 
   const handleCopyButtonClick = (e) => {

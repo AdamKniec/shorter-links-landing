@@ -106,17 +106,11 @@
   &__validation-message--hidden {
     display: none;
   }
-  // &__validation-message--hidden {
-  //   display: block;
-  // }
   &__link-list {
     width: 1000px;
     padding-left: 0;
     @include breakpoint(laptop) {
       width: 80%;
-    }
-    @include breakpoint(laptop) {
-      // padding: 0;
     }
   }
   &__list-item {
