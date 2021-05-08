@@ -1,6 +1,6 @@
 describe("Shortener component", () => {
   it("Should add the list item and data to localStorage", () => {
-    cy.visit("http://127.0.0.1:5500"); //Live server extension address
+    cy.visit("https://elated-tereshkova-84fd29.netlify.app"); //Live server extension address
     cy.clearLocalStorage("linksData");
     cy.get("#url-input").type("https://facebook.com");
     cy.get("#form-submit-button").click();
