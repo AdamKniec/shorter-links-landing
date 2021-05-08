@@ -882,6 +882,7 @@ body {
 
 .footer div .footer__logo {
   margin-right: 180px;
+  font-size: 2rem;
 }
 
 @media (max-width: 760px) {
@@ -900,6 +901,10 @@ body {
 
 .footer__icon {
   margin-right: 15px;
+}
+
+.footer__icon path:hover {
+  cursor: pointer;
 }
 
 .footer__icon:hover path {

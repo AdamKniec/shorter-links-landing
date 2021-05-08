@@ -18,9 +18,6 @@ describe("Shortener component", () => {
     cy.get("#validationMesage")
       .contains("Please add a valid link")
       .should("not.be.visible");
-
-    // simulate the copy button click
-    // cy.get(".shortener-component__copy-button").first().click();
   });
 
   it("Should see the validation messgae under the input when the URL is not correct", () => {
