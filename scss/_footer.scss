@@ -26,6 +26,7 @@
     }
     .footer__logo {
       margin-right: 180px;
+      font-size: 2rem;
       @include breakpoint(phablet) {
         margin-right: 0;
       }
@@ -40,6 +41,9 @@
   }
   &__icon {
     margin-right: 15px;
+    path:hover {
+      cursor: pointer;
+    }
   }
   &__icon:hover path {
     fill: hsl(180, 66%, 49%);

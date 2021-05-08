@@ -7,7 +7,6 @@
   }
 }
 .shortener-component {
-  //   max-width: 950px;
   background-color: #eff1f7;
   display: flex;
   flex-direction: column;
@@ -46,7 +45,7 @@
     border: none;
     font-family: "Poppins-Medium";
     font-size: 1em;
-    //wyeliminowac powtorzenia kodu
+    //no code repetition here
     @include breakpoint(laptop) {
       width: 65%;
     }
@@ -66,7 +65,7 @@
     }
   }
   &__button {
-    //reuzywalne style !
+    // reusable styles needed here
     padding: 13px;
     width: 120px;
     border-radius: 5px;
@@ -136,7 +135,7 @@
         border-bottom: 1px solid rgb(231, 224, 224);
       }
       p {
-        margin: 0; // TODO - nie stylujemy to tagach
+        margin: 0; // no tag based styling
         margin-left: 15px;
         @include breakpoint(phablet) {
           margin-left: 5%;

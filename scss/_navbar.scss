@@ -1,8 +1,4 @@
 @import "./mixins";
-// @font-face {
-//   font-family: "Poppins-";
-//   src: url("../assets/fonts/Poppins-ExtraBold.ttf") format("ttf");
-// }
 .navbar {
   display: flex;
   max-width: 1000px;
@@ -120,7 +116,4 @@
       }
     }
   }
-  // &__list-separator {
-  //   display: flex;
-  // }
 }
